@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hackhaton.R
+import com.example.hackhaton.databinding.ActivityOnboardingBinding
+import com.example.hackhaton.databinding.FragmentAccessibilityBinding
+import com.example.hackhaton.databinding.FragmentGuidedFilterBinding
 import com.example.hackhaton.ui.pager.FragmentPagerViewModel
 
 class AccessibilityFragment : Fragment() {
@@ -16,11 +19,15 @@ class AccessibilityFragment : Fragment() {
 
     private lateinit var viewModel: FragmentPagerViewModel
 
+    private lateinit var binding : FragmentAccessibilityBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_accessibility, container, false)
+        binding = FragmentAccessibilityBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
