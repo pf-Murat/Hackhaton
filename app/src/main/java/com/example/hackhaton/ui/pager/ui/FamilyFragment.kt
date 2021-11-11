@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.hackhaton.R
+import com.example.hackhaton.databinding.FragmentEaseOfTravelBinding
+import com.example.hackhaton.databinding.FragmentFamilyBinding
 import com.example.hackhaton.ui.pager.FragmentPagerViewModel
 
 class FamilyFragment : Fragment() {
@@ -16,11 +18,16 @@ class FamilyFragment : Fragment() {
 
     private lateinit var viewModel: FragmentPagerViewModel
 
+
+    private lateinit var binding : FragmentFamilyBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_family, container, false)
+        binding = FragmentFamilyBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
