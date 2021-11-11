@@ -26,8 +26,8 @@
         android:layout_toStartOf="@+id/separator_cell_properties"
         android:orientation="horizontal">
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/property_images"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/property_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

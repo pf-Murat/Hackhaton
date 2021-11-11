@@ -6,5 +6,6 @@ data class PropertyData(val id : Int,
                         val verified : Boolean,
                         val price : Int,
                         val location : String,
+                        val image : String,
                         val bedroom : Int,
                         val area : Int)

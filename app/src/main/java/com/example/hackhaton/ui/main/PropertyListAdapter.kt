@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.hackhaton.data.api.PropertyData
 import com.example.hackhaton.databinding.CellFilterBinding
 import com.example.hackhaton.databinding.CellPropertyBinding
@@ -17,6 +18,7 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     class PropertyViewVH(private val binding: CellPropertyBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(propertyData: PropertyData) {
             binding.tvLastContacted.text= propertyData.price.toString()
+            Glide.with(binding.propertyImage).load(propertyData.image).into(binding.propertyImage)
         }
     }
 
