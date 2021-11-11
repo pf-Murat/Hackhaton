@@ -1,12 +1,15 @@
 package com.example.hackhaton.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.example.hackhaton.MainActivity
 import com.example.hackhaton.databinding.FragmentGuidedFilterBinding
 import com.example.hackhaton.ui.pager.FragmentPagerViewModel
 import com.example.hackhaton.ui.pager.ui.PagerFragments
@@ -53,16 +56,23 @@ class GuidedFilterFragment : Fragment() {
             scrollPagerToPrevious()
         }
 
+        binding.doneButton.setOnClickListener {
+            startActivity(Intent(context, MainActivity::class.java))
+        }
+
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
-                binding.imgPagerNext.visibility = if (position < fragmentsViewPager.itemCount.minus(1))
+                binding.imgPagerNext.visibility = if (position < fragmentsViewPager.itemCount.minus(1)) {
+                    binding.doneButton.isVisible =false
                     View.VISIBLE
-                else
+                } else {
+                    binding.doneButton.isVisible =true
                     View.GONE
+                }
 
                 binding.imgPagerPrevious.visibility = if (position > 0)
                     View.VISIBLE

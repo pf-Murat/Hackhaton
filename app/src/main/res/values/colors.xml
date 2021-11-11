@@ -9,4 +9,61 @@
     <color name="white">#FFFFFFFF</color>
     <color name="soft_orange">#B35D25</color>
     <color name="softer_orange">#BC774A</color>
+
+    <color name="sand_dark">#E99B76</color>
+    <color name="sand_100">#F1A786</color>
+    <color name="sand_75">#F5BCA4</color>
+    <color name="sand_50">#F8D2C2</color>
+    <color name="sand_25">#FBE9E0</color>
+
+    <color name="sky_dark">#A0BEC9</color>
+    <color name="sky_100">#9BD3DD</color>
+    <color name="sky_75">#BCDCE5</color>
+    <color name="sky_50">#D2E7ED</color>
+    <color name="sky_25">#E8F4F6</color>
+
+    <color name="primary_clay_dark">#D55A4D</color>
+    <color name="primary_clay_100">#EF5E4E</color>
+    <color name="primary_clay_75">#E38B7E</color>
+    <color name="primary_clay_50">#ECB1A8</color>
+    <color name="primary_clay_25">#F5D8D4</color>
+
+
+    <color name="sea_dark">#4F3290</color>
+    <color name="sea_100">#5745A0</color>
+    <color name="sea_75">#7E74B2</color>
+    <color name="sea_50">#A8A2CC</color>
+    <color name="sea_25">#D4D1E5</color>
+
+    <color name="stone_dark">#D6C7C7</color>
+    <color name="stone_100">#E2D8D7</color>
+    <color name="stone_75">#E8E1E0</color>
+    <color name="stone_50">#EFEBEA</color>
+    <color name="stone_25">#F7F5F5</color>
+
+    <color name="global_black">#403B45</color>
+    <color name="global_white">#FFFFFF</color>
+    <color name="grey_1">#77757A</color>
+    <color name="grey_2">#BBB8BD</color>
+    <color name="grey_3">#E4E4E4</color>
+    <color name="grey_4">#F8F8F8</color>
+
+    <color name="interaction_1_light">#3B97BA</color>
+    <color name="interaction_1_dark">#007EA8</color>
+
+    <color name="success_dark">#128046</color>
+    <color name="success_100">#39A76D</color>
+    <color name="success_75">#67CD6A</color>
+    <color name="success_50">#BAD461</color>
+    <color name="success_25">#CAFCE2</color>
+
+    <color name="error_dark">#B82D48</color>
+    <color name="error_100">#ED4C6B</color>
+    <color name="error_75">#FF8098</color>
+    <color name="error_50">#FFE5EA</color>
+
+    <color name="warning_dark">#E5A822</color>
+    <color name="warning_100">#F3BF4F</color>
+    <color name="warning_75">#FFDB8C</color>
+    <color name="warning_50">#FFEBBF</color>
 </resources>

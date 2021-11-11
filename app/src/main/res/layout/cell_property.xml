@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cell_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recycler_cell_white_with_ripple"
+    android:paddingStart="14dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="14dp">
+
+    <View
+        android:id="@+id/separator_cell_properties"
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="233dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toStartOf="@+id/separator_cell_properties"
+        android:orientation="horizontal">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/property_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_light_grey_top_radius"
+            android:gravity="center"
+            android:paddingStart="1dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="1dp" />
+
+
+        <View
+            android:id="@+id/pageIndicatorViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_pager_shadow" />
+
+
+        <FrameLayout
+            android:id="@+id/cell_property_corner_icon"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_layout_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_layout"
+        android:background="@drawable/bg_white_bottom_radius"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/property_type_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/property_type_cts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/shape_cts_accent"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.05"
+                android:paddingStart="6dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="2dp"
+                android:text="@string/top_spot"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/property_cell_type"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/property_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/property_type_cts"
+                android:layout_alignBottom="@+id/property_type_cts"
+                android:layout_toEndOf="@+id/property_type_cts"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textAppearance="@style/caption_regular"
+                android:textColor="@color/grey_1"
+                tools:text="Apartment" />
+
+            <TextView
+                android:id="@+id/delivery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/property_type"
+                android:layout_alignBottom="@+id/property_type"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_toEndOf="@+id/property_type"
+                android:background="@drawable/bg_stone_25_rounded"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingStart="@dimen/small_padding2"
+                android:paddingEnd="@dimen/small_padding2"
+                android:textAppearance="@style/caption_regular_medium"
+                android:textColor="@color/sea_dark"
+                android:visibility="gone"
+                tools:text="Delivery: 2022"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/property_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/property_type_layout"
+            android:layout_alignStart="@+id/property_type_layout"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAppearance="@style/body"
+            tools:text="780,000 AED/year" />
+
+        <TextView
+            android:id="@+id/tv_inclusive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/property_price"
+            android:layout_alignBottom="@+id/property_price"
+            android:layout_marginStart="@dimen/default_padding"
+            android:layout_toEndOf="@+id/property_price"
+            android:background="@drawable/bg_stone_25_rounded"
+            android:drawableStart="@drawable/ic_inclusive"
+            android:drawablePadding="@dimen/small_padding"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingStart="@dimen/small_padding2"
+            android:paddingEnd="@dimen/small_padding2"
+            android:text="@string/ribbon_inclusive"
+            android:textAppearance="@style/caption_regular"
+            android:textColor="@color/primary_clay_100"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+
+
+        <TextView
+            android:id="@+id/property_location_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_inclusive"
+            android:layout_alignStart="@+id/property_type_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_marginEnd="@dimen/default_padding"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAppearance="@style/caption_regular"
+            android:textColor="@color/grey_1"
+            android:textIsSelectable="false"
+            tools:text="Laguna Tower, Lake Almas west, Jumeirah Lakes Towers, Dubai, Dubai, Dubai" />
+
+        <TextView
+            android:id="@+id/property_location_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/property_location_detail"
+            android:layout_alignStart="@+id/property_type_layout"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/property_cell_text"
+            android:visibility="gone"
+            tools:text="Jumeirah Lakes Towers" />
+
+        <LinearLayout
+            android:id="@+id/property_details_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/property_location_main"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/property_cell_margin_bottom_item"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/property_bed_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_attribute_bedroom"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/property_bed_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="10"
+                android:textAppearance="@style/caption_regular"
+                android:textSize="13sp"
+                tools:text="Studio"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/property_bath_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/ic_attribute_bathroom"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/property_bath_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="4"
+                android:textAppearance="@style/caption_regular"
+                android:textSize="13sp"
+                tools:text="9+"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/property_area_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="start"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_attribute_size" />
+
+            <TextView
+                android:id="@+id/property_area_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:textAppearance="@style/caption_regular"
+                android:textSize="13sp"
+                tools:text="99,999 sqm" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_agent_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/property_details_container"
+            android:layout_marginBottom="@dimen/small_padding2"
+            tools:visibility="visible">
+
+            <View
+                android:id="@+id/view_divider_contact"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/small_padding"
+                android:background="@color/grey_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_publish_date"
+                style="@style/caption_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="@dimen/small_padding"
+                android:text="Published 3 days ago"
+                android:textColor="@color/grey_1"
+                app:layout_constraintBottom_toBottomOf="@+id/ll_lead_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ll_lead_container"
+                tools:text="Published 3 days ago" />
+
+            <LinearLayout
+                android:id="@+id/ll_lead_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/default_padding"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider_contact"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_agent_contact_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_agent_call"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_agent_contact_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_agent_send_mail"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_agent_contact_whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_agent_whatsapp"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/container_last_contacted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_agent_contact"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/bg_warning_bottom_radius"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                style="@style/caption_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/small_padding"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:drawableStart="@drawable/ic_call_black_16"
+                android:drawablePadding="@dimen/small_padding"
+                android:text="@string/last_contacted" />
+
+            <TextView
+                android:id="@+id/tv_last_contacted"
+                style="@style/caption_regular_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_padding"
+                android:layout_marginBottom="@dimen/small_padding"
+                tools:text="12 Jul 2021" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_gray_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_layout_1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:alpha="0.5"
+        android:background="@drawable/bg_white_radius_12_borderless"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+
+
+    <ImageView
+        android:id="@+id/property_save"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentTop="true"
+        android:paddingStart="2dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginBottom="12dp"
+        android:scaleType="center"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toStartOf="@+id/iv_property_menu"
+        android:src="@drawable/bg_gray_circle_32" />
+
+    <ImageView
+        android:id="@+id/iv_property_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/property_save"
+        android:layout_alignTop="@+id/property_save"
+        android:layout_alignEnd="@+id/property_save"
+        android:layout_alignBottom="@+id/property_save"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="@dimen/default_padding"
+        android:padding="@dimen/small_padding"
+        android:src="@drawable/ic_hearth_filled" />
+
+    <ImageView
+        android:id="@+id/iv_property_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="12dp"
+        android:padding="@dimen/small_padding"
+        android:src="@drawable/ic_more_button_circle"
+        tools:visibility="visible" />
+
+</RelativeLayout>
