@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Hackhaton" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Hackhaton" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -15,6 +15,7 @@
 
         <item name="sliderStyle">@style/Widget.App.Slider</item>
         <item name="chipStyle">@style/ChipCustomStyle</item>
+        <item name="buttonStyle">@style/Button</item>
     </style>
 
     <style name="Theme.Hackhaton.NoActionBar">
@@ -40,6 +41,26 @@
 
     <style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:background">@drawable/bg_filter_button</item>
+    </style>
+
+    <style name="Button.Blue" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_filter_button_blue</item>
+    </style>
+
+    <style name="Button.SmallRadius" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:background">@drawable/bg_filter_button_blue_2dp</item>
+    </style>
+
+    <style name="Button.Label" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:background">@null</item>
     </style>
 
     <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Action">

@@ -21,7 +21,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <FrameLayout
-        android:id="@+id/container"
+        android:id="@+id/filter_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -46,7 +46,7 @@ class PlaceholderFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        childFragmentManager.beginTransaction().replace(_binding?.container?.id?:0,PropertyListingFragment()).commit()
+        childFragmentManager.beginTransaction().replace(_binding?.filterContainer?.id?:0,PropertyListingFragment()).commit()
     }
 
     companion object {

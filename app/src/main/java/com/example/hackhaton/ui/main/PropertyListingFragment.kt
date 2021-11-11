@@ -1,5 +1,6 @@
 package com.example.hackhaton.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.hackhaton.FilterActivity
 import com.example.hackhaton.data.api.*
 import com.example.hackhaton.databinding.FragmentPropertyListBinding
 
@@ -54,6 +56,10 @@ class PropertyListingFragment : Fragment() {
                 }
             }
         })
+
+        mBinding.btnFilters.setOnClickListener {
+            startActivity(Intent(activity, FilterActivity::class.java))
+        }
     }
 
 
@@ -61,7 +67,7 @@ class PropertyListingFragment : Fragment() {
         viewModel = ViewModelProvider(
             this,
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(MainViewModel::class.java)
+        )[MainViewModel::class.java]
     }
 
 }
