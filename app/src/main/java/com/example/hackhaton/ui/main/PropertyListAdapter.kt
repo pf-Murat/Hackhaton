@@ -19,6 +19,8 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(propertyData: PropertyData) {
             binding.tvLastContacted.text= propertyData.price.toString()
             Glide.with(binding.propertyImage).load(propertyData.image).into(binding.propertyImage)
+            binding.tvMatched.text = "Matched: " + propertyData.matchedLabels.joinToString { it }
+            binding.tvUnmatched.text = "Unmatched: " + propertyData.unMatchedLabels.joinToString { it }
         }
     }
 
@@ -36,7 +38,6 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-
         if (holder is PropertyViewVH)
             holder.bind(itemList[position])
     }
