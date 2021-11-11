@@ -5,4 +5,67 @@
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+
+
+    <!--Shared-->
+    <dimen name="font_big">20sp</dimen>
+    <dimen name="font_mid">14sp</dimen>
+    <dimen name="font_large">15sp</dimen>
+    <dimen name="small_padding">4dp</dimen>
+    <dimen name="small_padding2">6dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
+    <dimen name="extra_large_padding">32dp</dimen>
+    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="no_elevation">0dp</dimen>
+    <dimen name="elevation_small">1dp</dimen>
+
+    <!--Permission dialog-->
+    <dimen name="permission_dialog_font">16sp</dimen>
+
+    <!--MAIN BUTTON-->
+    <dimen name="main_button_margin">7dp</dimen>
+    <dimen name="main_button_height">52dp</dimen>
+    <dimen name="main_button_text_size">14sp</dimen>
+    <dimen name="power_by_margin_bottom">40dp</dimen>
+
+    <!--Toolbar-->
+    <dimen name="toolbar_back_button_size">24dp</dimen>
+    <dimen name="toolbar_back_button_margin">16dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <!--chips -->
+    <dimen name="chip_font_size">16sp</dimen>
+    <dimen name="filter_font_title">18sp</dimen>
+    <dimen name="filter_font_heading">25sp</dimen>
+
+    <dimen name="new_radius">10dp</dimen>
+    <dimen name="new_size">14sp</dimen>
+    <dimen name="custom_width">30dp</dimen>
+    <dimen name="custom_height">30dp</dimen>
+
+    <!-- Property cell view -->
+    <dimen name="elevationOnTop">10dp</dimen>
+    <dimen name="view_ribbon_text_size">9sp</dimen>
+    <dimen name="property_cell_margin_bottom_item">6dp</dimen>
+    <dimen name="property_cell_picture_mid_margin">20dp</dimen>
+    <dimen name="property_cell_picture_w">170dp</dimen>
+    <dimen name="property_cell_picture_h">113dp</dimen>
+    <dimen name="property_cell_type">10sp</dimen>
+    <dimen name="property_cell_price">15sp</dimen>
+    <dimen name="property_cell_text">12sp</dimen>
+
+    <dimen name="font_title">22sp</dimen>
+
+    <!-- New type scale -->
+    <dimen name="large_padding">24dp</dimen>
+    <dimen name="internal_padding">12dp</dimen>
+    <dimen name="font_style_title">24sp</dimen>
+    <dimen name="icon_size_default">24dp</dimen>
+
+    <dimen name="controller_radius">5dp</dimen>
+
+    <dimen name="my_account_clickable_text_button_min_height">44dp</dimen>
+
 </resources>

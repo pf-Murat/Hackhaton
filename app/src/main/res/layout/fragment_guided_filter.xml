@@ -22,6 +22,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="24dp" />
 
+
+
     <ImageView
         android:id="@+id/img_pager_next"
         android:layout_width="64dp"
@@ -29,6 +31,17 @@
         android:src="@drawable/arrow_right"
         android:padding="8dp"
         app:tint="#838383"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="24dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/done_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_tick"
+        android:padding="8dp"
+        app:tint="@color/softer_orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="24dp" />

@@ -2,4 +2,126 @@
     <string name="app_name">Hackhaton</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+
+
+
+    <!--Actions-->
+    <string name="action_ok">OK</string>
+    <string name="action_download">Download</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_login">Log In</string>
+    <string name="action_reset_pwd">Reset Password</string>
+    <string name="action_map">Map</string>
+
+    <!-- Titles -->
+    <string name="title_sorting">Sorting</string>
+    <string name="title_price_type">Payment type</string>
+
+    <!--Permission dialog-->
+    <string name="dialog_permission_not_now">Not Now</string>
+    <string name="dialog_permission_continue">Continue</string>
+
+    <string name="search_no_results_location_title">No results matching your search entry</string>
+    <string name="search_no_results_location_sub_title">Please check the entered location and try again.</string>
+    <string name="update_notification_settings_fail">please check your settings and try again.</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="login_sign_in_with_google_button">Sign in with Google</string>
+
+    <string name="settings">Settings</string>
+    <string name="near_me_alert_title">Please Turn On Location</string>
+    <string name="near_me_alert_message">To search nearby properties, please enable location services by going to Settings.</string>
+    <!-- Debug View-->
+    <string name="debug_view_tab_preferences_title" translatable="false">Shared Preferences</string>
+    <string name="debug_view_tab_notifications_title" translatable="false">Notifications</string>
+    <string name="debug_view_tab_design_kit_title" translatable="false">Design Kit</string>
+
+    <!-- Property -->
+    <string name="top_spot">Top Spot</string>
+    <string name="by_community_expert">By community expert</string>
+    <string name="search_no_results_part_1">No results matching your search entry</string>
+    <string name="search_no_results_part_2">Please check the entered location &amp; filters and try again</string>
+    <string name="property_detail_retry">Retry</string>
+    <string name="general_error">Service unavailable. Please try again later.</string>
+    <string name="credentials_error">Please verify your credentials</string>
+    <string name="property_not_available">Property not available</string>
+
+    <!--    price formatting -->
+    <string name="number_unit_k">K</string>
+    <string name="number_unit_m">M</string>
+    <string name="number_unit_b">B</string>
+
+    <!-- trends and statistics -->
+    <string name="plp_trends_title">Prices &amp; Trends</string>
+    <string name="plp_trends_empty">Sorry, no price data was found for this property.</string>
+
+    <!--  plp location building review  -->
+    <string name="plp_location_review_title">Location</string>
+    <string name="plp_location_review_value" translatable="false">1 review</string>
+    <string name="plp_location_review_value_plural" translatable="false">%1$d reviews</string>
+    <string name="plp_location_review_rating" translatable="false">%1$s/5</string>
+
+    <!-- fLoorplan -->
+    <string name="plp_floorplan_disclamer_label">The floor plans displayed on this website are for indicative purposes only, and therefore no representation or warranty is given by Propertyfinder FZ LLC as to their accuracy. Propertyfinder FZ LLC shall not be responsible or liable for any errors in, or reliance given to, the accuracy of these floorplans.</string>
+    <string name="plp_floorplan_subject_to_button">Subject to disclaimer</string>
+    <string name="plp_show_floor_plan_button">Show Property Floor Plan</string>
+    <string name="plp_3dview_button">View 360 Tour</string>
+
+    <!-- fLoorplan -->
+    <string name="plp_agent_languajes">Speaks %s. \nSpecialist in %s</string>
+
+    <string name="exception_search_error">Error in search</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <string name="plp_detail_saved">Property saved</string>
+    <string name="plp_detail_saved_removed">Removed from saved</string>
+    <string name="plp_detail_share_body">Hi, I found this property, Please check it out and tell me what you think… \n %1$s</string>
+    <string name="plp_detail_share_title">Share property</string>
+    <string name="plp_detail_share_subject">Check out this property</string>
+    <string name="last_contacted">Last contacted:</string>
+
+
+    <string name="ribbon_verified">Verified</string>
+    <string name="ribbon_new_construction">New Construction</string>
+    <string name="ribbon_from_developer">Direct From Developer</string>
+    <string name="ribbon_community_expert">Community Expert</string>
+    <string name="ribbon_live_viewing">Live Viewing</string>
+    <string name="ribbon_inclusive">Inclusive</string>
+    <string name="ribbon_unavailable">Unavailable</string>
+
+    <string name="search_filters">Filters</string>
+    <!--Location-->
+    <string name="location_search_locations">Search locations...</string>
+    <string name="location_clear_text">Clear Text</string>
+    <string name="fragment_location_title">Area or Building in %1$s</string>
+    <string name="search_hint">Building name, Community, or City</string>
+    <string name="search_cluster">Properties in area</string>
+    <string name="properties_list_subheading_title">Unique properties to be your next home</string>
+    <string name="location_near_me">Near Me</string>
+
+    <string name="location_search_network_error_label">Network Error</string>
+    <string name="location_search_no_results_label">No results matching your search location</string>
+    <string name="location_search_please_check_location_label">Please check the entered location and try again.</string>
+    <string name="location_search_area_or_building_label">Area or Building in %@</string>
+    <string name="location_search_submit_search_button">Search</string>
+    <string name="location_search_submit_done_button">Done</string>
+    <string name="location_search_near_me">Properties near me</string>
+    <plurals name="location_search_input_textplural">
+        <item quantity="one">&amp; 1 more</item>
+        <item quantity="other">&amp; %1$d more</item>
+    </plurals>
+    <string name="location_search_input_text" formatted="false">%1$s %2$s</string>
+
+    <string name="broker_whatsapp_support_phone">https://wa.me/%1$s</string>
+    <string name="action_report">Report this property</string>
+    <string name="action_share">Share</string>
+    <string name="action_hide">Hide</string>
+
+    <string name="delivery_date">Delivered in %1$s</string>
+
+
 </resources>

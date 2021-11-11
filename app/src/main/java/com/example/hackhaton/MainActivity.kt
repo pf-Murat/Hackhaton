@@ -3,6 +3,7 @@ package com.example.hackhaton
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hackhaton.databinding.ActivityMainBinding
+import com.example.hackhaton.ui.main.PropertyListingFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,5 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportFragmentManager.beginTransaction().replace(binding.container.id,PropertyListingFragment()).commit()
     }
 }

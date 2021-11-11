@@ -44,6 +44,11 @@ class PlaceholderFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        childFragmentManager.beginTransaction().replace(_binding?.container?.id?:0,PropertyListingFragment()).commit()
+    }
+
     companion object {
         /**
          * The fragment argument representing the section number for this
