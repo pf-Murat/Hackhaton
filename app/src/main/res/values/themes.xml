@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
 
         <item name="sliderStyle">@style/Widget.App.Slider</item>
+        <item name="chipStyle">@style/ChipCustomStyle</item>
     </style>
 
     <style name="Theme.Hackhaton.NoActionBar">
@@ -39,6 +40,23 @@
 
     <style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ChipCustomStyle" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="checkedIconEnabled">false</item>
+        <item name="checkedIcon">@drawable/check</item>
+        <item name="chipIcon">@drawable/circle</item>
+        <item name="drawableTint">@color/softer_orange</item>
+        <item name="background">@color/soft_orange</item>
+        <item name="checkedIconVisible">true</item>
+        <item name="android:checkable">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textStartPadding">4dp</item>
+        <item name="textEndPadding">8dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="iconStartPadding">4dp</item>
+        <item name="android:layout_margin">12dp</item>
     </style>
 
 </resources>

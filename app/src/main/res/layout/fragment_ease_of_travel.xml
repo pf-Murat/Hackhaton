@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="64dp"
         android:text="To Where: "
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +94,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
         app:layout_constraintTop_toBottomOf="@id/tv_travel_time_end">
 
         <RadioButton
@@ -102,21 +103,24 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:buttonTint="@color/soft_orange"
-            android:text="Walking"/>
+            android:text="Walking"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/soft_orange"
             android:layout_marginStart="22dp"
-            android:text="Driving"/>
+            android:text="Driving"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/soft_orange"
             android:layout_marginStart="22dp"
-            android:text="Public Transport"/>
+            android:text="Public Transport"
+            android:layout_weight="1"/>
 
     </RadioGroup>
 

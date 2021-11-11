@@ -2,47 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:paddingTop="64dp">
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/ChipCustomStyle"
+            android:text="Baby"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/ChipCustomStyle"
+            android:text="Kid"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/ChipCustomStyle"
+            android:text="Pet"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/ChipCustomStyle"
+            android:text="Grandparent"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______"/>
+    </com.google.android.material.chip.ChipGroup>
 
 </LinearLayout>
