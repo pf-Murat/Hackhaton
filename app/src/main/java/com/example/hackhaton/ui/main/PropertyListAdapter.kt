@@ -1,13 +1,16 @@
 package com.example.hackhaton.ui.main
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.hackhaton.R
 import com.example.hackhaton.data.api.PropertyData
 import com.example.hackhaton.databinding.CellFilterBinding
 import com.example.hackhaton.databinding.CellPropertyBinding
+import com.google.android.material.chip.Chip
 
 class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -17,10 +20,30 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     class PropertyViewVH(private val binding: CellPropertyBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(propertyData: PropertyData) {
-            binding.tvLastContacted.text= propertyData.price.toString()
             Glide.with(binding.propertyImage).load(propertyData.image).into(binding.propertyImage)
-            binding.tvMatched.text = "Matched: " + propertyData.matchedLabels.joinToString { it }
-            binding.tvUnmatched.text = "Unmatched: " + propertyData.unMatchedLabels.joinToString { it }
+
+            propertyData.matchedLabels.forEach {
+                binding.tvMatchedGroup.addView(generateChip(it).apply {
+                    isChecked =true
+                })
+            }
+
+            propertyData.unMatchedLabels.forEach {
+                binding.tvUnmatchedGroup.addView(generateChip(it).apply {
+                    isActivated=false
+                    isChecked =false
+                    isCheckable=false
+                   paintFlags= Paint.STRIKE_THRU_TEXT_FLAG
+                })
+            }
+        }
+
+
+        private fun generateChip(cText:String): Chip {
+             return (LayoutInflater.from(binding.cellLayout.context).inflate(R.layout.cell_chip,null,false) as Chip).apply {
+                 text=cText
+             }
+
         }
     }
 
