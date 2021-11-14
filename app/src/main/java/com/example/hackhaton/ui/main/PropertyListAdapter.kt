@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.hackhaton.R
 import com.example.hackhaton.data.api.PropertyData
+import com.example.hackhaton.databinding.CellFilter2Binding
 import com.example.hackhaton.databinding.CellFilterBinding
 import com.example.hackhaton.databinding.CellPropertyBinding
 import com.google.android.material.chip.Chip
@@ -41,23 +42,33 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         private fun generateChip(cText:String): Chip {
              return (LayoutInflater.from(binding.cellLayout.context).inflate(R.layout.cell_chip,null,false) as Chip).apply {
-                 text=cText
+                 text = cText
+                 textSize = 11f
              }
 
         }
     }
 
-    class FilterViewVH(itemView: View): RecyclerView.ViewHolder(itemView) {
-        fun bind(){
+    class FilterViewVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind() {
+
+        }
+    }
+
+    class FilterView2VH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind() {
 
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return if (viewType==1) {
-            mBinding= CellPropertyBinding.inflate(LayoutInflater.from(parent.context))
+        return if (viewType == 1) {
+            mBinding = CellPropertyBinding.inflate(LayoutInflater.from(parent.context))
             PropertyViewVH(mBinding)
-        }else FilterViewVH(CellFilterBinding.inflate(LayoutInflater.from(parent.context)).root)
+        } else if (viewType == 2)
+            FilterViewVH(CellFilterBinding.inflate(LayoutInflater.from(parent.context)).root)
+        else
+            FilterView2VH(CellFilter2Binding.inflate(LayoutInflater.from(parent.context)).root)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -72,7 +83,11 @@ class PropertyListAdapter(): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (position%5==3) 0 else 1
+        return when (position) {
+            3 -> 2
+            5 -> 3
+            else -> 1
+        }
     }
 
     override fun getItemCount(): Int {

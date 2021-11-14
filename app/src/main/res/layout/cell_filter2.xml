@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_padding"
-        android:text="How many bedrooms do you need?"
+        android:text="How big house do you need?"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,17 +30,17 @@
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 Bedrooms" />
+            android:text="500sqft - 700 sqft" />
 
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3 Bedrooms" />
+            android:text="700sqft - 900 sqft" />
 
         <com.google.android.material.chip.Chip
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4 Bedrooms" />
+            android:text="900sqft - 1100 sqft" />
 
     </com.google.android.material.chip.ChipGroup>
 
