@@ -27,22 +27,18 @@
         android:paddingTop="20dp">
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Baby"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Kid"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Pet"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Grandparent"/>
 

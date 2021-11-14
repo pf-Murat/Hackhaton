@@ -73,7 +73,8 @@ class GuidedFilterFragment : Fragment() {
                     binding.doneButton.isVisible =false
                     View.VISIBLE
                 } else {
-                    binding.doneButton.isVisible =true
+                    binding.doneButton.isVisible = true
+                    binding.imgPagerNext.isVisible = false
                     View.GONE
                 }
 

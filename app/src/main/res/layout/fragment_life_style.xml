@@ -27,27 +27,22 @@
         android:paddingTop="20dp">
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="City center"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Suburb"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Night life"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="Garden/Park"/>
 
         <com.google.android.material.chip.Chip
-            android:layout_width="wrap_content"
             style="@style/ChipCustomStyle"
             android:text="View of water"/>
 

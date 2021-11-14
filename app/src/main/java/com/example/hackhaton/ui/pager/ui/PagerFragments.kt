@@ -8,7 +8,8 @@ object PagerFragments {
             EaseOfTravelFragment.newInstance(),
             FamilyFragment.newInstance(),
             LifeStyleFragment.newInstance(),
-            AccessibilityFragment.newInstance()
+            AccessibilityFragment.newInstance(),
+            EnterEmailFragment.newInstance()
         )
     }
 }
